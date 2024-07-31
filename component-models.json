@@ -175,7 +175,7 @@
         "valueType": "string",
         "name": "price",
         "value": "",
-        "label": "Text"
+        "label": "Price"
       }
     ]
   },
