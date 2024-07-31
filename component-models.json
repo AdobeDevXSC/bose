@@ -155,7 +155,7 @@
   },
   {
     "id": "product",
-    "field": [
+    "fields": [
       {
         "component": "reference",
         "valueType": "string",
