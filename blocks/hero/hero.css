@@ -2,6 +2,10 @@ main .hero-container > div {
   max-width: unset;
 }
 
+main .hero-container .hero-wrapper {
+  height: 698px;
+}
+
 main .hero-container {
   padding: 0;
 }
@@ -10,6 +14,11 @@ main .hero-container {
   position: relative;
   padding: 32px;
   min-height: 300px;
+}
+
+.hero > div:nth-child(2) > div {
+  position: relative;
+  z-index: 2;
 }
 
 .hero h1 {
