@@ -18,15 +18,15 @@ export default async function decorate(block) {
 
       console.log(href);
 
-      const frag = await loadFragment(new URL(href).pathname);
-      console.log(frag);
+      // const frag = await loadFragment(new URL(href).pathname);
+      // console.log(frag);
 
-      const pic = frag.querySelector('picture');
+      // const pic = frag.querySelector('picture');
 
-      const div = document.createElement('div');
-      div.className = 'cards-card-image';
-      div.appendChild(pic);
-      li.replaceChildren(div);
+      // const div = document.createElement('div');
+      // div.className = 'cards-card-image';
+      // div.appendChild(pic);
+      // li.replaceChildren(div);
     }
 
     // [...li.children].forEach((div) => {
