@@ -12,27 +12,18 @@ export default async function decorate(block) {
 
     const anchor = li.querySelector('a');
     if (anchor) {
-      console.log(anchor);
       const { href } = anchor
-      // const resp = await fetch(`${href}.plain.html`);
-
-      console.log(href);
-
       const frag = await loadFragment(new URL(href).pathname);
       console.log(frag);
 
-      const pic = frag.querySelector('picture');
-
-      const div = document.createElement('div');
-      div.className = 'cards-card-image';
-      div.appendChild(pic);
-      li.replaceChildren(div);
+      const prod = frag.querySelector('.product');
+      li.innerHTML = prod.innerHTML;
     }
 
-    // [...li.children].forEach((div) => {
-    //   if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
-    //   else div.className = 'cards-card-body';
-    // });
+    [...li.children].forEach((div) => {
+      if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
+      else div.className = 'cards-card-body';
+    });
     ul.append(li);
   });
   ul.querySelectorAll('picture > img').forEach((img) => {
