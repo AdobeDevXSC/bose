@@ -166,7 +166,7 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "name",
+        "name": "productName",
         "label": "Product Name",
         "value": ""
       },
