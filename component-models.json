@@ -212,5 +212,62 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "teaser",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "headline",
+        "label": "Headline",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "value": "",
+        "label": "description",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "price",
+        "label": "Price",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "callToAction",
+        "value": "",
+        "label": "Call to Action",
+        "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "style",
+        "value": "",
+        "label": "Style",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "full",
+            "value": "Full Screen"
+          },
+          {
+            "name": "half",
+            "value": "Half Screen"
+          }
+        ]
+      }
+    ]
   }
 ]
