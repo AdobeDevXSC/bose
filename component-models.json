@@ -259,12 +259,12 @@
         "valueType": "string",
         "options": [
           {
-            "name": "full",
-            "value": "Full Screen"
+            "value": "full",
+            "name": "Full Screen"
           },
           {
-            "name": "half",
-            "value": "Half Screen"
+            "value": "half",
+            "name": "Half Screen"
           }
         ]
       }
