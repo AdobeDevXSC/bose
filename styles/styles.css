@@ -120,7 +120,7 @@ body.scrollable {
 
 @media (min-width: 900px) {
   :root {
-    --heading-font-size-xxl: 60px;
+    --heading-font-size-xxl: 96px;
     --heading-font-size-xl: 48px;
     --heading-font-size-l: 36px;
     --heading-font-size-m: 30px;
@@ -157,7 +157,11 @@ h4, h5, h6 {
   scroll-margin: calc(var(--nav-height) + 1em);
 }
 
-h1 { font-size: var(--heading-font-size-xxl) }
+h1 { 
+  font-size: var(--heading-font-size-xxl);
+  font-weight: 900;
+  margin: unset;
+}
 
 h2 { 
   font-size: var(--heading-font-size-l); 
@@ -218,19 +222,22 @@ a.button:any-link, button {
   display: inline-block;
   box-sizing: border-box;
   text-decoration: none;
-  border: 2px solid transparent;
+  border: 1px solid var(--link-color);
   padding: 5px 30px;
   text-align: center;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
+  font-size:16px;
+  text-transform: uppercase;
+  padding: 16px 24px;
   cursor: pointer;
-  color: var(--background-color);
-  background-color: var(--link-color);
+  color: var(--link-color);
+  background-color: var(--background-color);
   margin: 16px 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  border-radius: 8px;
+  border-radius: 2px;
   font-size: var(--body-font-size-xxs);
 }
 

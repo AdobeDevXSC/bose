@@ -18,144 +18,144 @@
 
 @font-face {
   font-family: bose-icons;
-  src: url("../fonts/bose-icons/bose-icons.eot?30s80t");
-  src: url("../fonts/bose-icons/bose-icons.eot?30s80t#iefix") format("embedded-opentype"),url("../fonts/bose-icons/bose-icons.ttf?30s80t") format("truetype"),url("../fonts/bose-icons/bose-icons.woff?30s80t") format("woff"),url("../fonts/bose-icons/bose-icons.svg?30s80t#bose-icons") format("svg");
+  src: url("./fonts/bose-icons/bose-icons.eot?30s80t");
+  src: url("./fonts/bose-icons/bose-icons.eot?30s80t#iefix") format("embedded-opentype"),url("./fonts/bose-icons/bose-icons.ttf?30s80t") format("truetype"),url("./fonts/bose-icons/bose-icons.woff?30s80t") format("woff"),url("./fonts/bose-icons/bose-icons.svg?30s80t#bose-icons") format("svg");
   font-weight: 400;
   font-style: normal;
   font-display: block
 }
 
 @font-face {
-  font-family: Bose Headline;
-  src: url("../fonts/bose/headline/Bose-HeadlineBlack.woff2") format("woff2"),url("../fonts/bose/headline/Bose-HeadlineBlack.woff") format("woff");
+  font-family: "Bose Headline";
+  src: url("./fonts/bose/headline/Bose-HeadlineBlack.woff2") format("woff2"),url("./fonts/bose/headline/Bose-HeadlineBlack.woff") format("woff");
   font-weight: 900;
   font-style: normal;
   font-display: block
 }
 
 @font-face {
-  font-family: Bose Headline;
-  src: url("../fonts/bose/headline/Bose-HeadlineBold.woff2") format("woff2"),url("../fonts/bose/headline/Bose-HeadlineBold.woff2") format("woff2");
+  font-family: "Bose Headline";
+  src: url("./fonts/bose/headline/Bose-HeadlineBold.woff2") format("woff2"),url("./fonts/bose/headline/Bose-HeadlineBold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: block
 }
 
-@font-face {
+/* @font-face {
   font-family: Bose Headline;
-  src: url("../fonts/bose/headline/Bose-HeadlineRegular.woff2") format("woff2"),url("../fonts/bose/headline/Bose-HeadlineRegular.woff") format("woff");
+  src: url("./fonts/bose/headline/Bose-HeadlineRegular.woff2") format("woff2"),url("./fonts/bose/headline/Bose-HeadlineRegular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block
+} */
+
+@font-face {
+  font-family: "Bose Display Slanted";
+  src: url("./fonts/bose/display/Bose-DisplaySlanted.woff2") format("woff2"),url("./fonts/bose/display/Bose-DisplaySlanted.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: block
 }
 
 @font-face {
-  font-family: Bose Display Slanted;
-  src: url("../fonts/bose/display/Bose-DisplaySlanted.woff2") format("woff2"),url("../fonts/bose/display/Bose-DisplaySlanted.woff") format("woff");
+  font-family: "Bose Display BackSlanted";
+  src: url("./fonts/bose/display/Bose-DisplayBackslanted.woff2") format("woff2"),url("./fonts/bose/display/Bose-DisplayBackslanted.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: block
 }
 
 @font-face {
-  font-family: Bose Display BackSlanted;
-  src: url("../fonts/bose/display/Bose-DisplayBackslanted.woff2") format("woff2"),url("../fonts/bose/display/Bose-DisplayBackslanted.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: block
-}
-
-@font-face {
-  font-family: Bose Text;
-  src: url("../fonts/bose/text/BoseText-Light.woff2") format("woff2"),url("../fonts/bose/text/BoseText-Light.woff") format("woff");
+  font-family: "Bose Text";
+  src: url("./fonts/bose/text/BoseText-Light.woff2") format("woff2"),url("./fonts/bose/text/BoseText-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: block
 }
 
 @font-face {
-  font-family: Bose Text;
-  src: url("../fonts/bose/text/BoseText-LightItalic.woff2") format("woff2"),url("../fonts/bose/text/BoseText-LightItalic.woff") format("woff");
+  font-family: "Bose Text";
+  src: url("./fonts/bose/text/BoseText-LightItalic.woff2") format("woff2"),url("./fonts/bose/text/BoseText-LightItalic.woff") format("woff");
   font-weight: 300;
   font-style: italic;
   font-display: block
 }
 
 @font-face {
-  font-family: Bose Text;
-  src: url("../fonts/bose/text/BoseText-Regular.woff2") format("woff2"),url("../fonts/bose/text/BoseText-Regular.woff") format("woff");
+  font-family: "Bose Text";
+  src: url("./fonts/bose/text/BoseText-Regular.woff2") format("woff2"),url("./fonts/bose/text/BoseText-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: block
 }
 
 @font-face {
-  font-family: Bose Text;
-  src: url("../fonts/bose/text/BoseText-RegularItalic.woff2") format("woff2"),url("../fonts/bose/text/BoseText-RegularItalic.woff") format("woff");
+  font-family: "Bose Text";
+  src: url("./fonts/bose/text/BoseText-RegularItalic.woff2") format("woff2"),url("./fonts/bose/text/BoseText-RegularItalic.woff") format("woff");
   font-weight: 400;
   font-style: italic;
   font-display: block
 }
 
 @font-face {
-  font-family: Bose Text;
-  src: url("../fonts/bose/text/BoseText-Medium.woff2") format("woff2"),url("../fonts/bose/text/BoseText-Medium.woff") format("woff");
+  font-family: "Bose Text";
+  src: url("./fonts/bose/text/BoseText-Medium.woff2") format("woff2"),url("./fonts/bose/text/BoseText-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: block
 }
 
 @font-face {
-  font-family: Bose Text;
-  src: url("../fonts/bose/text/BoseText-MediumItalic.woff2") format("woff2"),url("../fonts/bose/text/BoseText-MediumItalic.woff") format("woff");
+  font-family: "Bose Text";
+  src: url("./fonts/bose/text/BoseText-MediumItalic.woff2") format("woff2"),url("./fonts/bose/text/BoseText-MediumItalic.woff") format("woff");
   font-weight: 500;
   font-style: italic;
   font-display: block
 }
 
 @font-face {
-  font-family: Bose Text;
-  src: url("../fonts/bose/text/BoseText-SemiBold.woff2") format("woff2"),url("../fonts/bose/text/BoseText-SemiBold.woff") format("woff");
+  font-family: "Bose Text";
+  src: url("./fonts/bose/text/BoseText-SemiBold.woff2") format("woff2"),url("./fonts/bose/text/BoseText-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: block
 }
 
 @font-face {
-  font-family: Bose Text;
-  src: url("../fonts/bose/text/BoseText-SemiBoldItalic.woff2") format("woff2"),url("../fonts/bose/text/BoseText-SemiBoldItalic.woff") format("woff");
+  font-family: "Bose Text";
+  src: url("./fonts/bose/text/BoseText-SemiBoldItalic.woff2") format("woff2"),url("./fonts/bose/text/BoseText-SemiBoldItalic.woff") format("woff");
   font-weight: 600;
   font-style: italic;
   font-display: block
 }
 
-@font-face {
+/* @font-face {
   font-family: Bose Text;
-  src: url("../fonts/bose/text/BoseText-Bold.woff2") format("woff2"),url("../fonts/bose/text/BoseText-Bold.woff") format("woff");
+  src: url("./fonts/bose/text/BoseText-Bold.woff2") format("woff2"),url("./fonts/bose/text/BoseText-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: block
-}
+} */
 
 @font-face {
-  font-family: Bose Text;
-  src: url("../fonts/bose/text/BoseText-BoldItalic.woff2") format("woff2"),url("../fonts/bose/text/BoseText-BoldItalic.woff") format("woff");
+  font-family: "Bose Text";
+  src: url("./fonts/bose/text/BoseText-BoldItalic.woff2") format("woff2"),url("./fonts/bose/text/BoseText-BoldItalic.woff") format("woff");
   font-weight: 700;
   font-style: italic;
   font-display: block
 }
 
 @font-face {
-  font-family: Bose Text;
-  src: url("../fonts/bose/text/BoseText-Heavy.woff2") format("woff2"),url("../fonts/bose/text/BoseText-Heavy.woff") format("woff");
+  font-family: "Bose Text";
+  src: url("./fonts/bose/text/BoseText-Heavy.woff2") format("woff2"),url("./fonts/bose/text/BoseText-Heavy.woff") format("woff");
   font-weight: 900;
   font-style: normal;
   font-display: block
 }
 
 @font-face {
-  font-family: Bose Text;
-  src: url("../fonts/bose/text/BoseText-HeavyItalic.woff2") format("woff2"),url("../fonts/bose/text/BoseText-HeavyItalic.woff") format("woff");
+  font-family: "Bose Text";
+  src: url("./fonts/bose/text/BoseText-HeavyItalic.woff2") format("woff2"),url("./fonts/bose/text/BoseText-HeavyItalic.woff") format("woff");
   font-weight: 900;
   font-style: italic;
   font-display: block

@@ -16,6 +16,15 @@
   margin: 16px;
 }
 
+.cards .cards-card-body .color-swatch {
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  display: inline-block;
+  border: .5px solid #949494;
+  transition: width .2s, height .2s;
+}
+
 .cards .cards-card-image {
   line-height: 0;
 }

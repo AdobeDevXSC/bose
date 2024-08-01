@@ -13,18 +13,25 @@ main .hero-container {
 .hero {
   position: relative;
   padding: 32px;
-  min-height: 300px;
+  height: 698px;
 }
 
 .hero > div:nth-child(2) > div {
-  position: relative;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: white;
+  position: absolute;
+  bottom:30px;
+}
+
+.hero > div:nth-child(2) > div > p {
+  font-size: 24px;
+  font-weight:400;
 }
 
 .hero h1 {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
   color: white;
 }
 
@@ -42,3 +49,4 @@ main .hero-container {
   width: 100%;
   height: 100%;
 }
+
