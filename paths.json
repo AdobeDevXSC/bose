@@ -2,7 +2,6 @@
   "mappings": [
     "/content/bose/:/",
     "/content/bose/configuration:/.helix/config.json",
-    "/content/bose/configuration:/.helix/config.json",
     "/content/bose/metadata:/metadata.json"
   ]
 }
