@@ -3,7 +3,6 @@ import { moveInstrumentation } from '../../scripts/scripts.js';
 import { loadFragment } from '../fragment/fragment.js';
 
 export default async function decorate(block) {
-  let anchor;
 
   /* change to ul, li */
   const ul = document.createElement('ul');
@@ -12,7 +11,7 @@ export default async function decorate(block) {
     moveInstrumentation(row, li);
     while (row.firstElementChild) li.append(row.firstElementChild);
 
-    anchor = li.querySelector('a');
+    let anchor = li.querySelector('a');
     if (anchor) {
       const { href } = anchor;
       const frag = await loadFragment(new URL(href).pathname);
@@ -24,9 +23,9 @@ export default async function decorate(block) {
       if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
       else div.className = 'cards-card-body';
     });
-    ul.append(li);
+   
 
-    const item = ul.querySelector('.cards-card-body:nth-last-child(1)');
+    const item = li.querySelector('.cards-card-body:nth-last-child(1)');
     let colors = item.querySelector('p');
     if (colors) colors = colors.innerHTML.split(',');
 
@@ -40,6 +39,10 @@ export default async function decorate(block) {
       itemDiv.append(span);
     });
     item.replaceChildren(itemDiv);
+
+    anchor.textContent = 'ADD TO CART';
+    li.append(anchor);
+    ul.append(li);
   });
 
   ul.querySelectorAll('picture > img').forEach((img) => {
@@ -49,6 +52,5 @@ export default async function decorate(block) {
   });
   block.textContent = '';
   block.append(ul);
-  anchor.textContent = 'ADD TO CART';
-  block.append(anchor);
+  
 }
