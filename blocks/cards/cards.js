@@ -7,11 +7,12 @@ export default async function decorate(block) {
   /* change to ul, li */
   const ul = document.createElement('ul');
   [...block.children].forEach(async (row) => {
+
     const li = document.createElement('li');
     moveInstrumentation(row, li);
     while (row.firstElementChild) li.append(row.firstElementChild);
 
-    let anchor = li.querySelector('a');
+    const anchor = li.querySelector('a');
     if (anchor) {
       const { href } = anchor;
       const frag = await loadFragment(new URL(href).pathname);
@@ -23,25 +24,29 @@ export default async function decorate(block) {
       if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
       else div.className = 'cards-card-body';
     });
-   
+
 
     const item = li.querySelector('.cards-card-body:nth-last-child(1)');
     let colors = item.querySelector('p');
     if (colors) colors = colors.innerHTML.split(',');
 
     const itemDiv = document.createElement('div');
-    colors.forEach((color) => {
-      const span = document.createElement('span');
-      span.classList.add('color-swatch');
-      span.setAttribute('style', `background-color:#${color}`);
-      span.classList.add(color);
-      // span.innerHTML = color;
-      itemDiv.append(span);
-    });
+    if (colors) {
+      colors.forEach((color) => {
+        const span = document.createElement('span');
+        span.classList.add('color-swatch');
+        span.setAttribute('style', `background-color:#${color}`);
+        span.classList.add(color);
+        // span.innerHTML = color;
+        itemDiv.append(span);
+      });
+    }
     item.replaceChildren(itemDiv);
 
-    anchor.textContent = 'ADD TO CART';
-    li.append(anchor);
+    if (anchor) {
+      anchor.textContent = 'ADD TO CART';
+      li.append(anchor);
+    }
     ul.append(li);
   });
 
@@ -52,5 +57,5 @@ export default async function decorate(block) {
   });
   block.textContent = '';
   block.append(ul);
-  
+
 }
