@@ -2,7 +2,8 @@ import { moveInstrumentation } from '../../scripts/scripts.js';
 
 export default async function decorate(block) {
   let i = 0;
-  console.log(block.children.length);
+  const content = document.createElement('div');
+  content.classList.add('teaser-content');
   [...block.children].forEach((row) => {
     if (i === 1) {
       const p = row.querySelector('p');
@@ -13,12 +14,18 @@ export default async function decorate(block) {
       console.log(h2);
     }
 
-    if(i === block.children.length - 1) {
-      const style = row.querySelector('p');
-      block.classList.add(style.textContent);
+    if (i >= 1) {
+      content.append(row);
     }
+
     console.log(row);
     i += 1;
   });
-  console.log(block)
+
+  const style = content.querySelector('div:nth-child(5)');
+  const className = style.querySelector('p');
+  block.classList.add(className.textContent);
+  style.remove();
+ 
+  block.append(content);
 }

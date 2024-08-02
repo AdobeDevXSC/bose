@@ -1,0 +1,53 @@
+main .teaser-container > div {
+  /* max-width: unset; */
+  max-width: 1358px;
+}
+
+main .teaser-container .teaser-wrapper {
+  /* height: 698px; */
+}
+
+main .teaser-container {
+  padding: 0;
+}
+
+.teaser {
+  position: relative;
+  margin: auto;
+}
+
+.teaser.half {
+  width: 50%;
+}
+
+.teaser > .teaser-content {
+  position: absolute;
+  bottom:0;
+  color: white;
+  margin: 20px;
+}
+
+.teaser > div:nth-child(2) > div > p {
+  font-size: 24px;
+  font-weight:400;
+}
+
+.teaser h1 {
+  color: white;
+}
+
+.teaser picture {
+  /* position: absolute;
+  height: 698px;
+  z-index: 1;
+  inset: 0;
+  object-fit: cover;
+  box-sizing: border-box; */
+}
+
+.teaser img {
+  object-fit: cover;
+  width: 1358px;
+  height: 753px;
+}
+
