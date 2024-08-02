@@ -86,33 +86,6 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   }
 }
 
-async function fetchPanels() {
-  const panelsObj = {};
-  const panelsMeta = getMetadata('nav-panels');
-  const panelsPath = panelsMeta || '/nav-panels';
-  const resp = await fetch(`${panelsPath}.plain.html`);
-
-  if (resp.ok) {
-    const html = await resp.text();
-    const div = document.createElement('div');
-    div.innerHTML = html;
-    [...div.children].forEach((elem) => {
-      const section = elem.querySelector('.section-metadata');
-      const key = section.querySelector('.section-metadata > div > div:last-child').textContent;
-      section.remove();
-      const content = document.createElement('div');
-      content.classList.add('panel-content');
-      elem.querySelectorAll('div>:not(:first-child)').forEach((item) => {
-        content.append(item);
-      });
-      elem.append(content);
-      panelsObj[key] = elem;
-    });
-  }
-  return panelsObj;
-}
-
-
 /**
  * loads and decorates the header, mainly the nav
  * @param {Element} block The header block element
@@ -142,43 +115,10 @@ export default async function decorate(block) {
     brandLink.closest('.button-container').className = '';
   }
 
-  const panels = await fetchPanels();
   const navSections = nav.querySelector('.nav-sections');
-  // if (navSections) {
-  //   navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
-  //     if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
-  //     navSection.addEventListener('click', () => {
-  //       if (isDesktop.matches) {
-  //         const expanded = navSection.getAttribute('aria-expanded') === 'true';
-  //         toggleAllNavSections(navSections);
-  //         navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-  //       }
-  //     });
-  //   });
-  // }
   if (navSections) {
-    navSections.querySelectorAll(':scope > ul > li').forEach((navSection) => {
-      if (navSection.querySelector('ul')) {
-        navSection.classList.add('nav-drop');
-        // const key = navSection.textContent.split('\n').shift().toLowerCase().replace(' ', '-');
-        let key = navSection.querySelector('a');
-        if (key) key = key.textContent.toLowerCase().replace(' ', '-');
-
-        const leftSpan = document.createElement('span');
-        leftSpan.classList.add('left-span');
-        leftSpan.append(panels[key]);
-        const rightSpan = document.createElement('span');
-        rightSpan.classList.add('right-span');
-        navSection.querySelectorAll('ul>li').forEach((li) => {
-          if (li.innerHTML.trim() === '<hr>') {
-            li.remove();
-            return;
-          }
-          rightSpan.append(li);
-        });
-        navSection.querySelector('ul').append(leftSpan);
-        navSection.querySelector('ul').append(rightSpan);
-      }
+    navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
+      if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
       navSection.addEventListener('click', () => {
         if (isDesktop.matches) {
           const expanded = navSection.getAttribute('aria-expanded') === 'true';

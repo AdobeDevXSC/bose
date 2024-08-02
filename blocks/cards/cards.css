@@ -11,6 +11,12 @@
   border: 1px solid var(--dark-color);
   background-color: var(--background-color);
   background-color: #F8F8F8;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 28px;
+  height: 612px;
+  width: 241px;
 }
 
 .cards .cards-card-body {
@@ -24,6 +30,7 @@
   display: inline-block;
   border: .5px solid #949494;
   transition: width .2s, height .2s;
+  margin-right: 6px;
 }
 
 .cards .cards-card-image {
@@ -38,4 +45,10 @@
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+}
+
+.cards i.bif-calendar::before {
+  font-family: bose-icon;
+  font-size: 50px;
+  content: "\EA58";
 }

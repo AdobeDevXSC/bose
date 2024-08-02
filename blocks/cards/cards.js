@@ -47,6 +47,13 @@ export default async function decorate(block) {
       anchor.textContent = 'ADD TO CART';
       li.append(anchor);
     }
+
+    if (!anchor) {
+      const i = document.createElement('i');
+      i.classList.add('bif');
+      i.classList.add('bif-calendar');
+      li.append(i);
+    }
     ul.append(li);
   });
 
