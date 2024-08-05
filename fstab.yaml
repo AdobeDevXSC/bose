@@ -1,5 +1,5 @@
 mountpoints:
   /:
-    url: "https://author-p101152-e938206.adobeaemcloud.com/bin/franklin.delivery/AdobeDevXSC/bose/main"
+    url: "https://author-p59602-e475952.adobeaemcloud.com/bin/franklin.delivery/AdobeDevXSC/bose/main"
     type: "markup"
     suffix: ".html"
