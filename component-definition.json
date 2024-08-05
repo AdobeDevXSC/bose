@@ -137,21 +137,6 @@
           }
         },
         {
-          "title": "Author Card",
-          "id": "author-card",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
-                "template": {
-                  "name": "Author Card",
-                  "model": "author-card"
-                }
-              }
-            }
-          }
-        },
-        {
           "title": "Product",
           "id": "product",
           "plugins": {

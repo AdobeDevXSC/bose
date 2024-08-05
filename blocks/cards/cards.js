@@ -16,8 +16,10 @@ export default async function decorate(block) {
     if (anchor) {
       const { href } = anchor;
       const frag = await loadFragment(new URL(href).pathname);
-      const prod = frag.querySelector('.product');
-      li.innerHTML = prod.innerHTML;
+      if(frag) {
+        const prod = frag.querySelector('.product');
+        li.innerHTML = prod.innerHTML;
+      }
     }
 
     [...li.children].forEach((div) => {
