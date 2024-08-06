@@ -1,0 +1,43 @@
+main .product {
+  display: flex;
+  flex-direction: column;
+}
+
+main .product .product-pic img {
+  width: 600px;
+  align-self: center;
+}
+
+main .product .product-pic {
+  margin: auto;
+}
+
+main .product h1 {
+  border-bottom: 1px solid black;
+}
+
+
+main .product .product-desc .color-swatch {
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  display: inline-block;
+  border: .5px solid #949494;
+  transition: width .2s, height .2s;
+  margin-right: 6px;
+}
+
+@media (min-width: 990px) {
+  main .product {
+    flex-direction: row;
+  }
+  main .product-desc {
+    width: 33%;
+    padding: 0 40px;
+  }
+
+  main .product-pic {
+    width: 60%;
+    padding: 0 40px;
+  }
+}
