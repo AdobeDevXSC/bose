@@ -11,14 +11,11 @@ export default async function decorate(block) {
       h2.textContent = p.textContent;
       moveInstrumentation(p, h2);
       p.replaceWith(h2);
-      console.log(h2);
     }
 
     if (i >= 1) {
       content.append(row);
     }
-
-    console.log(row);
     i += 1;
   });
 

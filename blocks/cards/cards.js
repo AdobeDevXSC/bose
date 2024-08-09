@@ -15,8 +15,10 @@ export default async function decorate(block) {
     const anchor = li.querySelector('a');
     if (anchor) {
       const { href } = anchor;
-      const frag = await loadFragment(new URL(href).pathname);
-      if(frag) {
+      const res = await fetch(new URL(href).pathname  + '.plain.html');
+      if(res.ok) {
+        const frag = document.createElement('main');
+        frag.innerHTML = await res.text();
         const prod = frag.querySelector('.product');
         li.innerHTML = prod.innerHTML;
       }
@@ -27,11 +29,9 @@ export default async function decorate(block) {
       else div.className = 'cards-card-body';
     });
 
-
     const item = li.querySelector('.cards-card-body:nth-last-child(1)');
-    let colors = item.querySelector('p');
-    if (colors) colors = colors.innerHTML.split(',');
-
+    let colors = item.textContent.trim();
+    if (colors) colors = colors.split(','); 
     const itemDiv = document.createElement('div');
     if (colors) {
       colors.forEach((color) => {
@@ -39,7 +39,6 @@ export default async function decorate(block) {
         span.classList.add('color-swatch');
         span.setAttribute('style', `background-color:#${color}`);
         span.classList.add(color);
-        // span.innerHTML = color;
         itemDiv.append(span);
       });
     }

@@ -157,18 +157,17 @@ export default async function decorate(block) {
   //   });
   // }
   if (navSections) {
-    console.log(navSections.querySelectorAll(':scope .default-content-wrapper > ul > li'));
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
       if (navSection.querySelector('ul')) {
         navSection.classList.add('nav-drop');
         // const key = navSection.textContent.split('\n').shift().toLowerCase().replace(' ', '-');
-        console.log(navSection);
+
         let key = navSection.querySelector('p');
         if (key) key = key.textContent.toLowerCase().replace(' ', '-');
 
         const leftSpan = document.createElement('span');
         leftSpan.classList.add('left-span');
-        console.log(panels[key]);
+
         leftSpan.append(panels[key]);
         const rightSpan = document.createElement('span');
         rightSpan.classList.add('right-span');
